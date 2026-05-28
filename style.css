@@ -1,0 +1,294 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @font-face\{\
+  font-family:'Coneria';\
+  src:url('https://fonts.cdnfonts.com/s/14998/ConeriaScriptDemo.woff') format('woff');\
+\}\
+\
+*\{\
+  margin:0;\
+  padding:0;\
+  box-sizing:border-box;\
+\}\
+\
+html\{\
+  scroll-behavior:smooth;\
+\}\
+\
+body\{\
+  overflow-x:hidden;\
+  overflow-y:auto;\
+  font-family:'Poppins',sans-serif;\
+  min-height:100vh;\
+  background:\
+  radial-gradient(circle at top,#4a0d23,#1a0710 45%,#000);\
+  color:white;\
+  position:relative;\
+\}\
+\
+/* STARS */\
+\
+.stars\{\
+  position:fixed;\
+  inset:0;\
+  overflow:hidden;\
+  z-index:0;\
+\}\
+\
+.star\{\
+  position:absolute;\
+  width:2px;\
+  height:2px;\
+  background:white;\
+  border-radius:50%;\
+  animation:twinkle 2s infinite alternate;\
+\}\
+\
+@keyframes twinkle\{\
+  from\{opacity:.2;\}\
+  to\{opacity:1;\}\
+\}\
+\
+/* PETALS */\
+\
+.petal\{\
+  position:fixed;\
+  top:-20px;\
+  color:#ff4d88;\
+  font-size:20px;\
+  animation:fall linear forwards;\
+  opacity:.9;\
+  z-index:1;\
+  pointer-events:none;\
+\}\
+\
+@keyframes fall\{\
+  to\{\
+    transform:\
+    translateY(110vh)\
+    rotate(360deg);\
+    opacity:0;\
+  \}\
+\}\
+\
+/* CENTER */\
+\
+.center\{\
+  position:relative;\
+  min-height:100vh;\
+  display:flex;\
+  justify-content:center;\
+  align-items:center;\
+  z-index:5;\
+  flex-direction:column;\
+  padding:30px;\
+\}\
+\
+/* ENVELOPE */\
+\
+.envelope-wrapper\{\
+  text-align:center;\
+  animation:float 3s ease-in-out infinite;\
+\}\
+\
+@keyframes float\{\
+  0%,100%\{\
+    transform:translateY(0);\
+  \}\
+  50%\{\
+    transform:translateY(-12px);\
+  \}\
+\}\
+\
+.envelope\{\
+  width:320px;\
+  height:220px;\
+  background:#1c0a11;\
+  border:2px solid gold;\
+  border-radius:14px;\
+  position:relative;\
+  cursor:pointer;\
+  overflow:hidden;\
+  transition:.4s;\
+  box-shadow:0 0 45px rgba(255,0,120,.35);\
+\}\
+\
+.envelope:hover\{\
+  transform:scale(1.04);\
+  box-shadow:0 0 70px rgba(255,0,120,.6);\
+\}\
+\
+.flap\{\
+  position:absolute;\
+  width:100%;\
+  height:100%;\
+  background:#2b0c18;\
+  clip-path:polygon(0 0,50% 55%,100% 0);\
+\}\
+\
+.seal\{\
+  position:absolute;\
+  top:50%;\
+  left:50%;\
+  transform:translate(-50%,-50%);\
+  width:72px;\
+  height:72px;\
+  border-radius:50%;\
+  background:#9d0038;\
+  display:flex;\
+  justify-content:center;\
+  align-items:center;\
+  border:2px solid gold;\
+  font-weight:bold;\
+  font-size:18px;\
+  box-shadow:0 0 20px rgba(255,0,100,.8);\
+  z-index:2;\
+\}\
+\
+.open-text\{\
+  margin-top:24px;\
+  text-align:center;\
+  font-size:20px;\
+  color:#ffd9e7;\
+  letter-spacing:1px;\
+  font-weight:500;\
+\}\
+\
+/* BACK BUTTON */\
+\
+.back-btn\{\
+  position:absolute;\
+  top:15px;\
+  left:15px;\
+  padding:8px 14px;\
+  border:none;\
+  border-radius:999px;\
+  background:rgba(255,255,255,.08);\
+  color:white;\
+  backdrop-filter:blur(8px);\
+  cursor:pointer;\
+  transition:.3s;\
+  z-index:100;\
+  font-size:13px;\
+\}\
+\
+/* LETTER */\
+\
+.letter-screen\{\
+  display:none;\
+  position:relative;\
+  min-height:100vh;\
+  justify-content:center;\
+  align-items:flex-start;\
+  padding:80px 20px;\
+  z-index:10;\
+\}\
+\
+.letter\{\
+  width:90%;\
+  max-width:760px;\
+  background:rgba(20,8,14,.95);\
+  border-radius:28px;\
+  padding:50px;\
+  border:2px solid rgba(255,215,0,.45);\
+  position:relative;\
+  overflow:hidden;\
+  backdrop-filter:blur(8px);\
+  box-shadow:0 0 60px rgba(255,0,120,.25);\
+  margin:80px 0;\
+\}\
+\
+.title\{\
+  font-family:'Coneria',cursive;\
+  font-size:62px;\
+  text-align:center;\
+  color:#ffd166;\
+  margin-bottom:30px;\
+\}\
+\
+#typedText\{\
+  font-family:'Coneria',cursive;\
+  font-size:26px;\
+  line-height:2;\
+  color:#fff0f5;\
+  white-space:pre-line;\
+\}\
+\
+/* BUTTONS */\
+\
+.buttons\{\
+  margin-top:45px;\
+  min-height:140px;\
+  display:none;\
+  justify-content:center;\
+  align-items:center;\
+  gap:30px;\
+  flex-wrap:wrap;\
+\}\
+\
+.buttons.show\{\
+  display:flex;\
+\}\
+\
+button\{\
+  border:none;\
+  padding:16px 38px;\
+  border-radius:999px;\
+  font-size:18px;\
+  font-weight:600;\
+  cursor:pointer;\
+\}\
+\
+#yesBtn\{\
+  background:\
+  linear-gradient(45deg,#ff006a,#ff4da6);\
+  color:white;\
+\}\
+\
+#noBtn\{\
+  background:#2c2c2c;\
+  color:white;\
+\}\
+\
+.funny-text\{\
+  margin-top:18px;\
+  text-align:center;\
+  color:#ffbfd6;\
+\}\
+\
+/* CELEBRATION */\
+\
+.celebration\{\
+  display:none;\
+  position:fixed;\
+  inset:0;\
+  background:\
+  radial-gradient(circle at center,#550021,#17030c 50%,#000);\
+  z-index:50;\
+  justify-content:center;\
+  align-items:center;\
+  flex-direction:column;\
+  text-align:center;\
+\}\
+\
+.celebration h1\{\
+  font-size:78px;\
+  font-family:'Coneria',cursive;\
+  color:#ffd166;\
+\}\
+\
+.celebration p\{\
+  margin-top:18px;\
+  font-size:32px;\
+  font-family:'Coneria',cursive;\
+\}\
+\
+.ring\{\
+  margin-top:35px;\
+  font-size:90px;\
+\}}
